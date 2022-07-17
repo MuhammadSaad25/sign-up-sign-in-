@@ -13,19 +13,19 @@
 
     <div class="container">
         <div class="signin_signup">
-            <form action="" class="sign_in_form">
+            <form onsubmit = "login(); return false" action="" class="sign_in_form">
                 <h2 class="title">Sign in</h2>
                 <div class="input_field">
                     <i class="fas fa-envelope "></i>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" id="login_email">
                 </div>
 
                 <div class="input_field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" id="login_password">
                 </div>
-
-                <input type="submit" value="Login" class="btn">
+                <button type="submit" class="btn">Log in</button>
+                <!-- <input type="submit" value="Login" class="btn"> -->
                 <p class="social_text">Or Sign in with social plateform</p>
                 <div class="social_media">
                     <a href="#" class="social_icon">
@@ -43,39 +43,39 @@
                 </div>
                 <p class="account_text">Don't Have an account? <a href="#" id="sign_up_btn2">Sign up</a> </p>
             </form>
-            <form action="" class="sign_up_form">
+            <form onsubmit = "signup(); return false"  action="" class="sign_up_form">
                 <h2 class="title">Sign up</h2>
                 <div class="input_field">
                     <i class="fas fa-user "></i>
-                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Name" id="name">
                 </div>
 
                 <div class="input_field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" id="email">
                 </div>
 
                 <div class="input_field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" id="password">
                 </div>
 
                 <div class="input_field">
                     <i class="fa fa-venus-mars"></i>
-                    <input type="text" placeholder="Gender">
+                    <input type="text" placeholder="Gender" id="gender">
                 </div>
 
                 <div class="input_field">
                     <i class="fas fa-city"></i>
-                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="City" id="city">
                 </div>
 
                 <div class="input_field">
                     <i class="fas fa-location-dot"></i>
-                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="Address" id="address">
                 </div>
-
-                <input type="submit" value="Sign up" class="btn">
+                <button type="submit" class="btn">Sign up</button>
+                <!-- <input type="submit" value="Sign up" class="btn"> -->
                 <p class="social_text">Or Sign up with social plateform</p>
                 <div class="social_media">
                     <a href="#" class="social_icon">
@@ -119,6 +119,7 @@
         </div>
     </div>
     <script src="./style.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
