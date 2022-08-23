@@ -52,7 +52,7 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
   min-height: 238px;
   padding: 0 10px;
 }
@@ -76,7 +76,7 @@ form.sign_up_form {
 }
 
 .input_field {
-  width: 100%;
+  width: 75%;
   height: 30px;
   background: #f0f0f0;
   margin: 10px 0;
@@ -93,6 +93,13 @@ form.sign_up_form {
   font-size: 18px;
 }
 
+.input_field  {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+}
+
 .input_field input {
   flex: 5;
   background: none;
@@ -103,6 +110,33 @@ form.sign_up_form {
   font-weight: 600;
   color: #444;
 }
+
+.input_field option {
+  flex: 5;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  /* color: #666; */
+}
+
+select{
+  flex: 5;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #666;
+}
+
+select::after{
+  color: black;
+}
+
 .btn {
   width: 100px;
   height: 35px;
@@ -246,6 +280,20 @@ a {
   pointer-events: all;
 }
 
+.aBtn:hover{
+  cursor: pointer;
+}
+
+.aBtn1:hover{
+  cursor: pointer;
+}
+
+.box{
+  height: 100px;
+  width: 100%;
+  border: #520852 solid 5px;
+}
+
 /* responsive */
 
 @media (max-width: 779px) {
@@ -260,7 +308,7 @@ a {
     display: none;
   }
   form {
-    width: 80%;
+    width: 100%;
   }
   form.sign_up_form {
     display: none;
@@ -285,6 +333,7 @@ a {
 
 @media (max-width: 635px) {
   form {
-    width: 90%;
+    width: 100%;
   }
 }
+

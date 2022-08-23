@@ -5,28 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6b896963d9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">    
     <title>sign in sign up</title>
 </head>
 
 <body>
 
     <div class="container">
+
         <div class="signin_signup">
-            <form onsubmit = "login(); return false" action="" class="sign_in_form">
+
+
+            <form onsubmit="login(event); return false" action="" class="sign_in_form">
+
                 <h2 class="title">Sign in</h2>
+
                 <div class="input_field">
                     <i class="fas fa-envelope "></i>
-                    <input type="email" placeholder="Email" id="login_email">
+                    <input type="email" placeholder="Email" id="email1">
                 </div>
 
                 <div class="input_field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" id="login_password">
+                    <input type="password" placeholder="Password" id="password1">
                 </div>
+
                 <button type="submit" class="btn">Log in</button>
-                <!-- <input type="submit" value="Login" class="btn"> -->
+
+                <p id="error1" style="color: red"></p>
+
+
                 <p class="social_text">Or Sign in with social plateform</p>
+
+                <!-- <p id="result" style="color: red"></p> -->
+
                 <div class="social_media">
                     <a href="#" class="social_icon">
                         <i class="fab fa-facebook"></i>
@@ -41,15 +53,31 @@
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-                <p class="account_text">Don't Have an account? <a href="#" id="sign_up_btn2">Sign up</a> </p>
+
+                <p class="account_text" style="text-align: center;">If you want to take quiz and don't <br> have an
+                    account, please create <br> an account first <a href="#" id="sign_up_btn2">Sign up</a> </p>
+
             </form>
-            <form onsubmit = "signup(); return false"  action="" class="sign_up_form">
+
+
+            <form onsubmit="signup(event)" class="sign_up_form">
+
                 <h2 class="title">Sign up</h2>
+
                 <div class="input_field">
                     <i class="fas fa-user "></i>
-                    <input type="text" placeholder="Name" id="name" required>
+                    <input type="text" placeholder="Name" id="fullName" required>
                 </div>
 
+                <div class="input_field">
+                    <i class="fa fa-venus-mars"></i>
+                    <select name="gender" id="gender" aria-placeholder="Male" >
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
                 <div class="input_field">
                     <i class="fas fa-envelope"></i>
                     <input type="email" placeholder="Email" id="email" required>
@@ -61,65 +89,87 @@
                 </div>
 
                 <div class="input_field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" id="rePassword" required>
+                </div>
+
+                <!-- <div class="input_field">
                     <i class="fa fa-venus-mars"></i>
                     <input type="text" placeholder="Gender" id="gender" required>
-                </div>
+                </div> -->
 
-                <div class="input_field">
-                    <i class="fas fa-city"></i>
-                    <input type="text" placeholder="City" id="city" required>
-                </div>
-
-                <div class="input_field">
-                    <i class="fas fa-location-dot"></i>
-                    <input type="text" placeholder="Address" id="address" required>
-                </div>
                 <button type="submit" class="btn">Sign up</button>
-                <!-- <input type="submit" value="Sign up" class="btn"> -->
+
+
+                <p id="result" style="color: red"></p>
+                <p id="error" style="color: red"></p>
+
                 <p class="social_text">Or Sign up with social plateform</p>
+
                 <div class="social_media">
+
                     <a href="#" class="social_icon">
                         <i class="fab fa-facebook"></i>
                     </a>
+
                     <a href="#" class="social_icon">
                         <i class="fab fa-twitter"></i>
                     </a>
+
                     <a href="#" class="social_icon">
                         <i class="fab fa-google"></i>
                     </a>
+
                     <a href="#" class="social_icon">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
+
                 </div>
-                <p class="account_text">Already Have an account? <a href="#" id="sign_in_btn2">Sign in</a> </p>
+
+                <p class="account_text" style="text-align: center;">If you already have an account, <br> click on the
+                    signin button and <br> login to your account <br> <a href="#" id="sign_in_btn2">Sign in</a> </p>
+
             </form>
 
+
+
+
         </div>
+
         <div class="panels_container">
             <div class="panel left_panel">
 
                 <div class="content">
-                    <h3>Member of Brand?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iure rerum fugiat sint! Aperiam,
-                        voluptates?</p>
+
+                    <h3>Java Script Quiz Online</h3>
+                    <p>If you already have an account, click on the signin button and login to your account</p>
                     <button class="btn" id="sign_in_btn">Sign in</button>
                 </div>
+
                 <img src="./img/signin.svg" alt="" class="image">
+
             </div>
+
 
             <div class="panel right_panel">
                 <div class="content">
-                    <h3>New to Brand?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iure rerum fugiat sint! Aperiam,
-                        voluptates?</p>
+                    <h3>Java Script Quiz Online</h3>
+                    <p>If you want to take quiz and don't have an account, please create an account first</p>
                     <button class="btn" id="sign_up_btn">Sign up</button>
                 </div>
                 <img src="./img/signup.svg" alt="" class="image">
             </div>
         </div>
     </div>
+    
+
+
     <script src="./style.js"></script>
-    <script src="./app.js"></script>
+    <!-- <script src="./app.js"></script> -->
+    <script src="./index.js"></script>
+    <script src="./login.js"></script>
+    <!-- <script src="./dashbord.js"></script> -->
+
 </body>
 
 </html>
