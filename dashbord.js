@@ -11,7 +11,7 @@ let loggedInUser = {};
             }
 
 
-            document.querySelector("#email").innerText = loggedInUser.email;
+            // document.querySelector("#email").innerText = loggedInUser.email;
 
             document.querySelector("#name").innerText = loggedInUser.fullName;
 

@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   display: flex;
   align-items: center;
@@ -93,7 +94,7 @@ form.sign_up_form {
   font-size: 18px;
 }
 
-.input_field  {
+.input_field {
   flex: 1;
   text-align: center;
   color: #666;
@@ -119,10 +120,9 @@ form.sign_up_form {
   width: 100%;
   font-size: 18px;
   font-weight: 600;
-  /* color: #666; */
 }
 
-select{
+select {
   flex: 5;
   background: none;
   border: none;
@@ -133,7 +133,7 @@ select{
   color: #666;
 }
 
-select::after{
+select::after {
   color: black;
 }
 
@@ -147,6 +147,7 @@ select::after{
   font-weight: 600;
   margin: 10px 0;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -248,6 +249,19 @@ a {
   display: none;
 }
 
+.box {
+
+  height: 60px;
+  width: 100%;
+  border: #520852 solid 5px;
+  border-radius: 50px;
+
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+
 /* animation */
 
 .container.sign_up_mode::before {
@@ -280,19 +294,14 @@ a {
   pointer-events: all;
 }
 
-.aBtn:hover{
+.aBtn:hover {
   cursor: pointer;
 }
 
-.aBtn1:hover{
+.aBtn1:hover {
   cursor: pointer;
 }
 
-.box{
-  height: 100px;
-  width: 100%;
-  border: #520852 solid 5px;
-}
 
 /* responsive */
 
@@ -307,12 +316,15 @@ a {
   .container::before {
     display: none;
   }
+
   form {
     width: 100%;
   }
+
   form.sign_up_form {
     display: none;
   }
+
   .container.sign_up_mode2 form.sign_up_form {
     display: flex;
     opacity: 1;
@@ -325,6 +337,7 @@ a {
   .panels_container {
     display: none;
   }
+
   .account_text {
     display: initial;
     margin-top: 30px;
@@ -336,4 +349,3 @@ a {
     width: 100%;
   }
 }
-
