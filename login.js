@@ -45,13 +45,13 @@ function login(e) {
         }
     }
     if (!isFound) {
-        document.querySelector("#error").innerText = "user not found";
+        document.querySelector("#error1").innerText = "user not found";
         return;
     }
 
     setTimeout(() => {
         document.querySelector("#result").innerText = "";
-        document.querySelector("#error").innerText = "";
+        document.querySelector("#error1").innerText = "";
     }, 5000);
 
     e.target.reset();

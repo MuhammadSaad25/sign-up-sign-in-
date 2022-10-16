@@ -120,6 +120,7 @@ form.sign_up_form {
   width: 100%;
   font-size: 18px;
   font-weight: 600;
+  color: #666;
 }
 
 select {
@@ -130,11 +131,7 @@ select {
   width: 100%;
   font-size: 18px;
   font-weight: 600;
-  color: #666;
-}
-
-select::after {
-  color: black;
+  color: #444;
 }
 
 .btn {
